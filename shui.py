@@ -356,7 +356,7 @@ output_box = scrolledtext.ScrolledText(
 )
 output_box.pack(expand=True, fill=tk.BOTH, padx=15, pady=(0, 15))
 
-# Initial placeholder text
+# ========== INITIAL_INSTRUCTIONS ANALYSIS  ==========
 output_box.insert(tk.END, "\n\n\n     ✨ Align your face with the markers\n\n")
 output_box.insert(tk.END, "     Press SPACEBAR to receive\n     your personalized reading\n\n\n")
 output_box.tag_add("placeholder", "1.0", tk.END)
@@ -364,4 +364,5 @@ output_box.tag_config("placeholder", font=("Poppins", 11, "italic"), justify="ce
 output_box.config(state=tk.DISABLED)
 
 threading.Thread(target=camera_loop, daemon=True).start() 
+
 root.mainloop()
